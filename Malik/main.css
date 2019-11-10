@@ -1,0 +1,601 @@
+
+
+/*----------------------1-----------------------*/
+/*                  FONTS                       */
+/*----------------------------------------------*/
+
+
+@font-face {
+	font-family: 'MyFontBold';
+    src: url('../fonts/AvenirNext-Bold.woff') format('woff2'),
+         url('../fonts/AvenirNext-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+	font-family: 'MyFontDemiBold';
+    src: url('../fonts/AvenirNext-DemiBold.woff') format('woff2'),
+         url('../fonts/AvenirNext-DemiBold.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+
+
+
+/*----------------------2-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+
+header{
+	background-color: #fff;
+	position: relative;
+}
+
+header .container{
+	display: flex;
+	flex-direction: row;
+	margin: 36px 60px;
+	border-bottom: 1px solid #bdd2e3;
+	padding-bottom: 11px;
+	background-color: #fff;
+	position: relative;
+}
+header .container .burger{
+	display: none; 
+	margin-left: auto;
+	width: 50px;
+	height: 36px;
+	background:transparent; 
+	border:none;
+	cursor: pointer;	
+}
+
+
+header .container .burger div{
+	background-color:#000;
+	height: 4px;
+	margin: 5px 0;
+	transition: all 0.4s ease;
+  }
+
+header .container .burger div:nth-child(2){
+	height: 6px;
+}
+
+
+header .container .burger:focus div:nth-child(1){  
+	transform: rotate(45deg) translate(2px, 1px);
+}
+header .container .burger:focus div:nth-child(2){
+	display: none;
+}
+header .container .burger:focus div:nth-child(3){
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+header .main-nav {
+	margin-left: auto; 
+}
+header .main-nav ul li{
+	display: inline-block; 
+	margin-right: 15px;
+	
+}
+header .main-nav ul li a{
+	text-decoration: none;
+	color: #000;
+}
+
+
+/*----------------------3-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+
+
+main .hero .container{
+	display: flex; 
+	flex-direction: row; 
+	padding: 0 60px;
+}
+main .hero .container .hero__desc{
+	padding-top: 32px;
+	width: 50%;
+}
+main .hero .container .hero__desc h1{
+	font-size: 37px;
+	width: 53%;
+	font-family: 'MyFontBold'; 
+	color: #393939;
+	margin-bottom: 28px;
+	text-transform: capitalize;
+}
+main .hero .container .hero__desc p{
+	line-height: 1.5;  
+    width: 53%;
+    margin-bottom: 47px;
+	color: #333;
+}
+main .hero .container .hero__desc a{
+	background-color: #504cd5;
+	color: #fff;
+	text-decoration: none;
+	padding: 13px 44px;
+	font-family: 'MyFontBold';
+	border-radius: 24px;
+
+}
+main .hero .container .hero__image{
+	width:50%;
+	height: 300px;
+}
+main .hero .container .hero__image img{
+   height: 100%;
+   width: 100%;
+}
+
+
+
+/*----------------------4-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+
+.meetYourMatch{
+	margin: 100px 50px 0 50px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.meetYourMatch .meetYourMatch__background{
+    background-color: rgba(81,107,255,.2); 
+	height: 474px;
+	position: absolute;
+	z-index: 1; 
+	width: 100%;
+	border-radius: 21px;
+	margin: auto;
+}
+.meetYourMatch .meetYourMatchــcontent{
+	position: relative;
+	z-index: 2; 
+	padding-top: 63px;
+}
+.meetYourMatch .meetYourMatchــcontent h2{
+	font-size: 30px;
+	font-family: 'MyFontDemiBold';
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+
+.meetYourMatch .meetYourMatchــcontent .switcher{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+	position: relative;
+	width: 223px;
+	margin: auto;
+	
+}
+.meetYourMatch .meetYourMatchــcontent .switcher label{
+
+   display: flex;
+   position: relative;	
+   justify-content: center;
+   align-items: center;
+}
+
+
+.meetYourMatch .meetYourMatchــcontent .switcher label img{
+	position: absolute;
+	z-index: 1;
+}
+.meetYourMatch .meetYourMatchــcontent .switcher label input{
+	position: absolute;
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	opacity: 0; 
+}
+.meetYourMatch .meetYourMatchــcontent .switcher span{
+	margin: 0 10px 0 10px;
+	color:#5b5a5a;
+	text-transform: uppercase; 
+}
+
+.meetYourMatch .meetYourMatchــcontent form{
+    text-align: center;
+}
+
+
+.meetYourMatch .meetYourMatchــcontent form .form-group{
+	border-radius: 25px;
+	border: 2px solid #504cd5;
+	width:32%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin:30px auto;
+	background-color: #fff;
+	position: relative;
+}
+
+.meetYourMatch .meetYourMatchــcontent form .form-group::before{
+	 content:url('../images/map-pin.png');
+	 width:50px;
+	 height:20px;
+	 display: block;
+}
+.meetYourMatch .meetYourMatchــcontent form .form-group input{
+	height: 44px;
+	width: 250px;
+	border-radius: 23px;
+	border: none;
+	display: block;
+}
+
+.meetYourMatch .meetYourMatchــcontent form .form-group button{
+	background-color:#504cd5;
+	color:#fff;
+	border: none;
+	height: 46px;
+	width:180px;
+	border-radius: 21px;
+	font-size: 15px;
+	font-family: 'MyFontBold';
+	
+}
+.meetYourMatch .meetYourMatchــcontent .widgets{
+	display: grid;
+	grid-template-columns: repeat(4,18%); 
+	justify-content: center; 
+	grid-gap: 50px;
+	margin-top: 50px;
+}
+.meetYourMatch .meetYourMatchــcontent .widget{
+	background-color: #fff;
+	box-shadow: 12px 12px 53px#7c79df36; 
+}
+.meetYourMatch .meetYourMatchــcontent .widget ,
+.meetYourMatch .meetYourMatchــcontent .widget__image,
+.meetYourMatch .meetYourMatchــcontent .widget img{
+    width: 100%;
+}
+.meetYourMatch .meetYourMatchــcontent .widget .widget__desc{
+	line-height: 1.6;
+    padding: 14px;
+}
+.meetYourMatch .meetYourMatchــcontent .widget h4{
+	font-family: 'MyFontBold';
+}
+.meetYourMatch .meetYourMatchــcontent .widget p{
+	color: #313131;
+}
+
+
+
+/*----------------------5-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+
+.howItWorks{
+	padding:130px;
+}
+.howItWorks h2{
+	font-size: 30px;
+	font-family: 'MyFontDemiBold';
+	text-align: center;
+	margin-bottom: 70px;
+}
+.howItWorks .widgets{
+	display: flex;
+	flex-direction: row;
+}
+.howItWorks .widget{
+	text-align:center;
+	padding: 0 20px;
+}
+.howItWorks .widget__desc{
+ padding-top: 10px;
+}
+.howItWorks .widget__desc h3{
+	font-size: 20px;
+	margin-bottom: 19px;
+	font-weight: 500;
+
+}
+.howItWorks .widget__desc p{
+	color: #797777;
+	line-height:1.5;
+}
+
+/*----------------------6-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+
+
+.stories{
+	padding:50px;
+	background-color: rgba(81,107,255,.1); 
+   
+ }
+ .stories h2{
+	 font-size: 30px;
+	 font-family: 'MyFontDemiBold';
+	 text-align: center;
+	 margin-bottom: 20px;
+ }
+ .stories .heading-paragraph{
+	 width: 50%;
+	 text-align: center;
+	 margin: auto;
+	 color:#4f4d4d;
+	 line-height: 1.3;
+	 font-size: 17px;
+	 margin-bottom: 40px;
+ }
+ .stories .widgets{
+	 display: grid;
+	 grid-template-columns: repeat(3,30%);
+	 grid-gap: 14px;
+	 justify-content: center;
+ }
+ .stories  .widget ,
+ .stories  .widget__image,
+ .stories  .widget img{
+	 width: 100%;
+ }
+ .stories  .widget .widget__desc{
+	 padding-top: 14px;
+	 line-height: 1.7;
+ }
+ .stories  .widget .widget__desc h3{
+	 font-size: 19px;
+ }
+ .stories  .widget .widget__desc a{
+	 text-decoration: none;
+ }
+ 
+
+/*----------------------7----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+
+.actions{
+    height: 300px;
+    background-color:#4143d9;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+ }
+ .actions .container{
+    text-align: center;
+ }
+ .actions h2{
+    font-size: 35px;
+    color:#fff;
+    font-family: 'MyFontBold';
+    margin-bottom: 53px;
+ }
+ .actions a{
+    text-decoration: none;
+    padding: 15px 47px;
+    border-radius: 37px;
+    font-family: 'MyFontBold';
+    border: 2px solid #fff;
+ }
+ .actions a.is-secondary{
+    color:#4143d9;
+	background-color:#fff;
+	margin-right: 10px;
+ }
+ .actions a.is-outline{
+   color:#fff;
+   background-color:#4143d9 ;
+ }
+
+
+/*---------------------8-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+
+
+footer{
+	padding:100px 70px;
+	background-color: #fff;
+	
+}
+footer .container{
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+footer .copyrights{
+	line-height: 1.7;
+}
+footer .copyrights p{
+	color: #797878;
+}
+footer .copyrights a{
+	text-decoration: none;
+	color: #797878;
+}
+footer .footer-nav{
+	display: grid;
+	grid-template-columns:repeat(4,1fr);
+}
+footer .footer-nav .item h5{
+	font-family: 'MyFontBold';
+}
+footer .footer-nav .item ul li{
+	margin-top: 15px;
+}
+footer .footer-nav .item ul li a{
+  color:#000;
+  text-decoration: none;
+}
+
+
+/*----------------------9----------------------*/
+/*                    Responsive               */
+/*       كل ما هو متعلق بالهواتف والتابلت    */
+/*---------------------------------------------*/
+
+
+/*-------------- header responsive ---------------*/
+
+@media(max-width:767px){
+	header .container{
+		margin: 36px 30px;
+	}
+	header .container .burger{
+		display: block;
+	}
+	header  .container .main-nav{ 
+		position: absolute;
+		top: 52px;
+		width: 100%;
+		background-color:#738ddb;
+		transform: translateY(-240px); 
+		transition: all 0.4s ease;
+	}
+	header  .container .main-nav ul{
+		margin: 20px;
+	}
+	header  .container .main-nav ul li{
+	  display: block;
+	  margin-bottom: 15px;
+	}
+	header  .container .main-nav ul a{
+		color:#fff;
+	}
+	header .container .burger:focus ~ .main-nav{
+		transform: translateY(0); 
+	}
+  
+}
+
+
+/*-------------- hero responsive ---------------*/
+
+@media(max-width:1200px){ 
+	main .hero .container .hero__desc h1{
+		font-size: 37px;
+		width: 100%;
+	}
+	main .hero .container .hero__desc p{
+		width: 100%;
+	}
+}
+@media(max-width:767px){
+	main .hero .container{
+		flex-direction: column;
+		padding: 0px 30px;
+	}
+	main .hero .container .hero__desc{
+		width: 100%;
+	}
+	main .hero .container .hero__image {
+		width: 100%;
+	}
+}
+
+/*------------- meetYourMatch responsive ------------*/
+
+@media(max-width:992px){
+	.meetYourMatch .meetYourMatchــcontent .widgets{
+		grid-template-columns: repeat(2,27%);
+	}	
+}
+@media(max-width:767px){
+	.meetYourMatch{
+		margin:0;
+	}
+	
+	.meetYourMatch .meetYourMatch__background{
+		border-radius: 0 0 21px 21px; 
+	}
+	.meetYourMatch .meetYourMatchــcontent .widgets{
+		grid-template-columns: repeat(1,70%);
+	}	
+	.meetYourMatch .meetYourMatchــcontent form .form-group{
+		width:70%;
+	}
+}
+
+/*--------------- howItWorks responsive -------------*/
+
+@media(max-width:992px){
+	.howItWorks .widgets{
+		flex-direction: column;
+	}
+	.howItWorks .widget{
+		margin-bottom: 70px;
+	}
+}
+@media(max-width:767px){
+	.howItWorks{
+		padding:0;
+		margin-top:70px;
+	}
+}
+
+/*---------- stories responsive -----------*/
+
+@media(max-width:992px){
+	.stories .widgets{
+		grid-template-columns: repeat(2,40%);
+		grid-gap: 20px;
+	}
+}
+@media(max-width:767px){
+	.stories{
+		padding: 50px 0;
+	}
+	.stories .widgets{
+		grid-template-columns: repeat(1,90%);
+	}
+	.stories .heading-paragraph{
+		width: 80%;
+	}
+}
+/*---------- actions responsive -----------*/
+
+@media(max-width:767px){
+	.actions h2{
+		font-size: 28px;
+	}
+	.actions a{
+		padding: 13px 45px;
+	}
+}
+
+/*----------- footer responsive ----------*/
+
+@media(max-width:992px){
+	footer{
+		padding:100px 40px;
+	}
+	footer .container{
+		grid-template-columns: 25% 75%;
+	}
+	footer .footer-nav .item ul li a{
+		font-size: 13px;
+	}
+}
+
+@media(max-width:767px){
+    footer .container{
+		grid-template-columns: 100%;
+	}
+	footer .copyrights{
+       margin-bottom: 40px;
+	}
+	footer .footer-nav{
+		grid-template-columns:repeat(2,1fr);
+		grid-gap: 50px;
+	}
+}
