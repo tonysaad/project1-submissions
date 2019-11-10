@@ -1,0 +1,688 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+
+@font-face {
+    font-family: 'Avenirnextregular';
+    src: url('../fonts/AvenirNext-Regular.woff2') format('woff2'),
+         url('../fonts/AvenirNext-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'Avenirnextmedium';
+    src: url('../fonts/AvenirNext-Medium.woff2') format('woff2'),
+         url('../fonts/AvenirNext-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'Avenirnextbold';
+    src: url('../fonts/AvenirNext-Bold.woff2') format('woff2'),
+         url('../fonts/AvenirNext-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'Avenirnextdemibold';
+    src: url('../fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+         url('../fonts/AvenirNext-DemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
+}
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/* 
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+html, body {
+    width: 100%;
+    height: 100%;    
+    background: white;
+    font-family: 'Avenirnextregular';
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'Avenirnextbold';
+    font-size: 38px;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+h2 {
+    font-family: 'Avenirnextdemibold';
+    font-size: 26px;
+    line-height: 1.4;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Avenirnextmedium';
+    font-size: 20px;
+    padding: 10px 0;
+}
+h4 {
+    font-family: 'Avenirnextdemibold';
+    font-size: 20px;
+}
+h5 {
+    font-family: 'Avenirnextbold';
+    font-size: 15px;
+}
+p {
+    font-size: 17px;
+}
+a {
+    text-decoration: none;
+}
+
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+.button {
+    display: inline-block;
+    background: #3040C4;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    border: none;
+    border-radius: 50px;
+}
+.hero__desc .button.is-primary {
+    margin-top: 28px;
+    padding: 16px 63px;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*               البناء العام للصفحة          */
+/*----------------------------------------------*/
+
+
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header {
+    margin: 30px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: rgba(24, 24, 248, 0.1);
+    padding-bottom: 16px;
+    margin: 6px 30px;
+
+}
+.burger {
+    display: none;
+}
+nav.main-nav {
+    display: flex;
+}
+nav.main-nav li a {
+    color: black;
+    font-family: 'Avenirnextmedium';
+    border: 10px solid transparent;
+}
+nav.main-nav li a:hover {
+    color: #3040C4;
+    font-family: 'Avenirnextbold';
+}
+.main-nav li {
+    display: inline-block;
+}
+img.icon {
+    width: 90px;
+}
+
+
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero__desc {
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+.hero__image img {
+    width: 90%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+.hero .container {
+    display: flex;
+    margin-left: 36px;
+    margin-top: 50px;
+}
+.hero .container .hero__desc {
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 1.5;
+    max-width: 300px;
+    padding-right: 100px;
+    padding-top: 70px;
+}
+.hero .container .hero__image {
+    width: 60%;
+    height: -webkit-fill-available;
+}
+a.button.is-primary:hover {
+    box-shadow: 0 3px 30px rgb(48,64,196,.5);
+}
+
+
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+section.meetYourMatch, .howItWorks {
+    background: rgb(253, 254, 255);
+}
+div.meetYourMatch__background {
+    background-color: rgb(230, 232, 247);
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    width: 92%;
+    height: 80%;
+    margin: 60px;
+}
+.meetYourMatchــcontent {
+    position: relative;
+    text-align: center;
+}
+.switcher {
+    margin-right: 74px;
+}
+form {
+    padding-left: 70px;
+}
+form span {
+    padding-left: 15px;
+    padding-right: 6px;
+    color: darkgray;
+}
+label input[type="checkbox"] {               
+    -webkit-appearance: none;
+}
+.form-group {
+    display: flex;
+}
+.form-group input {
+    position: absolute;
+    top: 260px;
+    left: 36%;
+    border: solid;
+    border-color: #3040C4;
+    border-radius: 40px;
+    padding: 22px 88px;
+}
+.form-group .button.is-primary {
+    position: relative;
+    top: 20px;
+    left: 52%;
+    padding: 23px 35px;
+    padding-bottom: 24px;
+}
+::placeholder {
+    color: #979FE9;
+    font-family: "Avenirnextregular";
+    font-size: 18px;
+}
+.widgets.is-searchResults {
+    margin: 0 85px;
+}
+.widgets {
+    display: flex;
+}
+.is-searchResults .widget {
+    position: relative;
+    top: 72px;
+    margin: 10px auto;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+.widgets .widget img {
+    width: 100%;
+    height: 100%;
+}
+.meetYourMatch .widget__desc {
+    padding: 14px;
+    padding-bottom: 25px;
+    line-height: 1.4;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.05);
+    text-align: initial;
+}
+.meetYourMatch .widget__desc p {
+    font-family: "Avenirnextregular";
+    font-size: 15px;
+}
+
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+.howItWorks .container {
+    width: 100%;
+    padding-top: 62px;
+}
+.howItWorks {
+    text-align: center;
+}
+.howItWorks .widget__desc p {
+    font-size: 14px;
+    padding: 0px 38px;
+    padding-bottom: 62px;
+    line-height: 1.4;
+}
+.is-howItWorks .widget__image {
+    width: 40%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories {
+    background: #F6F6F9;
+    padding-bottom: 120px;
+}
+.stories .container {
+    width: 80%;
+    margin: 0 auto;
+}
+.stories h2 {
+    padding: 40px;
+}
+.stories h3 {
+    font-family: "Avenirnextregular";
+}
+.stories a {
+    font-family: "Avenirnextdemibold";
+    font-size: 15px;
+    text-decoration: none;
+    color: #3040C4;
+}
+.heading-paragraph {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    width: 500px;
+    margin: 0 auto;
+}
+.stories img {
+    width: 100%;
+}
+.stories .widget__image {
+    padding: 47px 16px;
+    padding-bottom: 9px;
+}
+.stories .widget__desc {
+    padding: 0 20px;
+}
+
+
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions {
+    background: #3040C4;
+    color: white;
+    padding-bottom: 60px;
+}
+.actions h2 {
+    padding-top: 65px;
+}
+.actions .button {
+    display: inline-block;    
+    text-decoration: none;
+    font-weight: bolder;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 45px;
+    margin-left: 10px;
+}
+.button.is-secondary {
+    background: white;
+    color: #3040C4;
+}
+.button.is-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.actions .container {
+    text-align: center;
+}
+a.button.is-secondary:hover {
+    padding: 22px 55px;
+    box-shadow: 0 3px 30px rgb(255,255,255,.5);
+    font-family: 'Avenirnextbold';
+    font-size: large;
+}
+a.button.is-outline:hover {
+    padding: 22px 55px;
+    box-shadow: 0 3px 30px rgb(255,255,255,.5);
+    font-family: 'Avenirnextbold';
+    font-size: large;
+}
+
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+footer {
+    width: 90%;
+    line-height: 1.9;
+    margin: 70px 26px;
+}
+footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+footer .copyrights {
+    margin-bottom: 26px;
+}
+footer .copyrights img {
+    margin-bottom: 10px;
+    padding-top: 33px;
+}   
+footer .copyrights p {
+    font-size: 15px;
+}
+footer .copyrights a {
+    color: black;
+}
+.footer-nav {
+    display: flex;
+    box-sizing: border-box;
+}
+.footer-nav .item {
+    margin: 25px 0;
+    padding-right: 31px;
+}
+.footer-nav .item a {
+    color: black;
+    font-size: 16px;
+}
+.footer-nav .item a:hover {
+    color: #3040C4;
+}
+.footer-nav .item h5 li {
+    line-height: 1.4;
+
+}
+
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+@media (max-width: 425px) {
+    header .container {
+        margin: 0;
+    }
+    .burger {
+        display: block;
+    }
+    .burger.is-visible-mobile {
+        display: flex;
+        margin-left: auto; 
+        border: none;
+        background: none;
+    }
+    .burger.is-visible-mobile a {
+        color: black;
+        padding: 14px 0;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+    }
+    nav#navbar {
+        display: none;
+    }
+    .hero .container {
+        display: block;
+    }
+    .hero .container .hero__desc {
+        padding-top: 10px;
+    }
+    .hero__image img {
+        width: 166%;
+    }
+    section.meetYourMatch, .howItWorks {
+        background: rgb(253, 254, 255);
+    }
+    div.meetYourMatch__background {
+        width: 100%;
+        margin: 0;
+    }
+    form {
+        padding-left: 70px;
+    }
+    form span {
+        padding-left: 15px;
+        padding-right: 6px;
+        color: darkgray;
+    }
+    label input[type="checkbox"] {               
+        -webkit-appearance: none;
+    }
+    .form-group {
+        display: flex;
+    }
+    .form-group input {
+        left: 20px;
+    }
+    .form-group .button.is-primary {
+        position: relative;
+        top: 20px;
+        left: 172px;
+        padding: 23px 35px;
+        padding-bottom: 24px;
+    }
+    ::placeholder {
+        color: #979FE9;
+        font-family: "Avenirnextregular";
+        font-size: 18px;
+    }
+    .widgets {
+        display: grid;
+    }
+    .meetYourMatch .widget__desc {
+        text-align: initial;
+    }
+    .meetYourMatch .widget__desc p {
+        font-family: "Avenirnextregular";
+        font-size: 15px;
+    }
+    .howItWorks {
+        text-align: center;
+    }
+    .howItWorks .widget__desc p {
+        font-size: 14px;
+        padding: 0px 38px;
+        padding-bottom: 62px;
+        line-height: 1.4;
+    }
+    .stories {
+        background: #F6F6F9;
+        padding-bottom: 120px;
+    }
+    .stories h2 {
+        padding: 40px;
+    }
+    .stories h3 {
+        font-family: "Avenirnextregular";
+    }
+    .stories a {
+        font-family: "Avenirnextdemibold";
+        font-size: 15px;
+        text-decoration: none;
+        color: #3040C4;
+    }
+    .heading-paragraph {
+        width: 300px;
+    }
+    .stories img {
+        width: 100%;
+    }
+    .stories .widget__desc {
+        padding: 0 20px;
+    }
+    .button.is-secondary {
+        background: white;
+        color: #3040C4;
+        margin-left: 30px;
+    }
+    footer {
+        line-height: 1.9;
+        margin: 70px 26px;
+    }
+    footer .container {
+        display: block;
+    }
+    footer .copyrights {
+        margin-bottom: 26px;
+    }
+    footer .copyrights img {
+        margin-bottom: 10px;
+    }   
+    footer .copyrights p {
+        font-size: 15px;
+    }
+    footer .copyrights a {
+        color: black;
+    }
+    .footer-nav {
+        flex-flow: wrap;
+        box-sizing: border-box;
+    }
+    .footer-nav .item {
+        margin: 25px 0;
+        padding-right: 31px;
+    }
+    .footer-nav .item a {
+        color: black;
+        font-size: 16px;
+    }
+    .footer-nav .item h5 li {
+        line-height: 1.4;
+
+    }
+}
+@media (min-width: 425px) and (max-width: 1024px) {
+    .hero .container .hero__desc {
+        padding-right: 60px;
+        padding-top: 30px;
+    }
+    .hero__image img {
+        top: 140px;
+    }
+    .meetYourMatch .widgets {
+        flex-flow: wrap;
+    }
+    .howItWorks .widgets {
+        display: grid;
+    }
+    div.meetYourMatch__background {
+        background-color: rgb(230, 232, 247);
+        border: none;
+        border-radius: 30px;
+        position: absolute;
+        width: 84%;
+        height: 40%;
+        margin: 60px;
+    }
+    .meetYourMatchــcontent {
+        position: relative;
+        text-align: center;
+    }
+    .switcher {
+        margin-right: 74px;
+    }
+    form {
+        padding-left: 70px;
+    }
+    form span {
+        padding-left: 15px;
+        padding-right: 6px;
+        color: darkgray;
+    }
+    label input[type="checkbox"] {               
+        -webkit-appearance: none;
+    }
+    .form-group {
+        display: flex;
+    }
+    .form-group input {
+        position: absolute;
+        top: 260px;
+        left: 28%;
+        border: solid;
+        border-color: #3040C4;
+        border-radius: 40px;
+        padding: 22px 88px;
+    }
+    .form-group .button.is-primary {
+        position: relative;
+        top: 20px;
+        left: 53%;
+        padding: 23px 35px;
+        padding-bottom: 24px;
+    }
+    .howItWorks .widget__desc p {
+        width: 260px;
+        margin: 0 auto;
+    }
+    .stories .widgets {
+        flex-flow: row wrap;
+    }
+    footer .copyrights img {
+        padding-right: 62px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1040px) {
+    div.meetYourMatch__background {
+        width: 88%;
+        height: 31%;
+    }
+    .hero__image img {
+        top: 10px;
+    }
+}
